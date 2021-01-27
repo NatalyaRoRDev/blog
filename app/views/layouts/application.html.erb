@@ -15,6 +15,27 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="navbar navbar-fixed-top">
+      <div class="container">
+        <div class='logo'>AppName</div>
+        <nav>
+          <ul class='nav navbar-nav navbar-right'>
+            <li><%= link_to 'Главная', root_path,
+                               :class => 'link' %></li>
+            <li><%= link_to 'Мой профиль', '#',
+                               :class => 'link' %></li>
+            <li><%= link_to 'Помощь', help_path,
+                               :class => 'link' %></li>
+            <li><%= link_to 'Контакты', contacts_path,
+                               :class => 'link' %></li>
+            <li><%= link_to 'Регистрация', '#',
+                               :class => 'link' %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class='container'>      
+      <%= yield %>
+    </div>  
   </body>
 </html>
