@@ -78,7 +78,7 @@ h1 {
 
 /* Form for signup */
 .form {
-	border: 2px solid coral;
+	margin-left: 550px;
 	font-size: 1.3em;
 	float: left;
 	height: 480px;
@@ -108,7 +108,7 @@ h1 {
 
 /* field in form signup */
 
-.field_for {
+.form-control {
 	width: 520px;
 	border: 2px solid maroon;
 	
@@ -129,6 +129,22 @@ h1 {
 
 .btn:hover {
 	background-color: coral;
+}
+
+/* Вывод ошибок при регистрации */
+
+  
+li {
+    color: red;
+    margin: 0 0 15px 0;
+  }
+
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
 }
 
 
