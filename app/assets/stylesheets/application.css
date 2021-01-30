@@ -37,6 +37,17 @@
 }
 
 
+/* название формы 'Sign up' */
+.signup {
+	border-bottom: 2px solid maroon;
+	width: 100px;
+	height: 35px;
+	margin-top: 20px;
+	margin-left: 560px;
+
+}
+
+
 /* sidebar */
 
 .col-md-6 {
@@ -78,6 +89,7 @@ h1 {
 
 /* Form for signup */
 .form {
+	margin-top: 60px;
 	margin-left: 550px;
 	font-size: 1.3em;
 	float: left;
