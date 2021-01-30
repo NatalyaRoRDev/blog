@@ -37,8 +37,8 @@
 }
 
 
-/* название формы 'Sign up' */
-.signup {
+/* название формы 'Sign up' и 'Log in' */
+.signup-login{
 	border-bottom: 2px solid maroon;
 	width: 100px;
 	height: 35px;
@@ -89,8 +89,8 @@ h1 {
 
 /* Form for signup */
 .form {
-	margin-top: 60px;
-	margin-left: 550px;
+	margin-top: 40px;
+	margin-left: 552px;
 	font-size: 1.3em;
 	float: left;
 	height: 480px;
@@ -135,7 +135,7 @@ h1 {
 
 .btn {
 	border: 2px solid coral;
-	width: 180px;
+	width: 230px;
 	margin-left: 170px;
 }
 

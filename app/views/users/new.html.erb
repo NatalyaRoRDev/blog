@@ -1,6 +1,6 @@
 <% provide(:title, "Sign Up") %>
-<div class="signup">
- <h1>Sign up</h1>
+<div class="signup-login">
+ <h1>Регистрация</h1>
 </div>
 <div class="row">
   <div class="form">
@@ -8,25 +8,29 @@
     <%= render 'shared/error_messages' %>
   	  <div class="fiels_signup_name">
   	    <%= f.label :name %><br />
-  	    <%= f.text_field :name, :class => "form-control" %>
+  	    <%= f.text_field :name, :class => "form-control",
+                                :placeholder => "Ваше имя" %>
   	  </div>
       <div class="fiels_signup_email">
   	    <%= f.label :email %><br />
-  	    <%= f.email_field :email, :class => "form-control" %>
+  	    <%= f.email_field :email, :class => "form-control",
+                 :placeholder => "Адрес электронной почты" %>
       </div>
       <div class="fiels_signup_password">
   	    <%= f.label :password %><br />
   	    <%= f.password_field :password, 
-  	                         :class => "form-control" %>
+  	                         :class => "form-control",
+                       :placeholder => "Придумайте пароль" %>
       </div>
       <div class="fiels_signup_password2">
   	    <%= f.label :password_confirmation, "Confirmation" %>
         <br />
   	    <%= f.password_field :password_confirmation,
-  	                         :class => "form-control" %>
+  	                         :class => "form-control",
+                  :placeholder => "Введите пароль еще раз" %>
       </div>
       <div class="sbmt">
-  	  <%= f.submit "Create my account", 
+  	  <%= f.submit "Создать свою страницу", 
   	                         :class => "btn" %>
       </div>
   	<% end %>

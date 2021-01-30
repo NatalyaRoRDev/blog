@@ -1,2 +1,31 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<% provide(:title, "Log in") %>
+<div class="signup-login">
+  <h1>Войти</h1>
+</div>
+
+<div class="row">
+  <div class="form">
+    <%= form_for(:session, url: login_path) do |f| %>
+
+      <div class="fiels_signup_name">
+        <%= f.label :email %>
+        <%= f.email_field :email, :class => 'form-control',
+        :placeholder => "Адрес электронной почты" %>
+      </div>
+      <div class="fiels_signup_name">
+        <%= f.label :password %>
+        <%= f.password_field :password,
+                           :class => 'form-control',
+                 :placeholder => "Введите пароль" %>
+      </div>
+      <div class="sbmt">
+        <%= f.submit "Войти на сайт", :class => "btn" %>
+      </div>
+    <% end %>
+
+    <p>
+      Еще не с нами? <%= link_to "Создать свою страницу!", 
+                                          signup_path %>
+    </p>
+  </div>
+</div>
