@@ -25,19 +25,27 @@
   <ul class="topmenu">
     <li><%= link_to 'Главная', root_path,
                      :class => "a" %></li>
-    <li><%= link_to 'Мотивашки', root_path,
+
+    <% if logged_in? %>
+      <li><%= link_to 'Мотивашки', root_path,
+                             :class => "a" %></li>
+      <li><%= link_to 'Профиль', current_user, 
+                             :class => 'a' %>
+        <ul class="submenu">
+          <li><%= link_to 'Настройки', root_path,
+                             :class => "a" %></li>
+          <li><%= link_to 'Выход', logout_path,
+                                   method: "delete" %></li>
+        </ul>
+      </li>
+        <li><%= link_to 'Помощь', help_path,
                      :class => "a" %></li>
-    <li><%= link_to 'Профиль', current_user, :class => 'a' %>
-      <ul class="submenu">
-        <li><%= link_to 'Настройки', root_path,
+    <% else %>
+      <li><%= link_to 'Войти', login_path, 
                      :class => "a" %></li>
-        <li><%= link_to 'Выход', logout_path, 
-        method: "delete", :class => "a" %></li>
-      </ul>
-    </li>
-    <li><%= link_to 'Помощь', help_path,
-                     :class => "a" %></li>
-    <li><%= link_to 'Контакты', contacts_path,
+    <% end %>
+
+      <li><%= link_to 'Контакты', contacts_path,
                      :class => "a" %></li>
   </ul>
 </nav>
