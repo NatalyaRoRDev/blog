@@ -18,6 +18,14 @@
                            :class => 'form-control',
                  :placeholder => "Введите пароль" %>
       </div>
+      <div class="fiels_signup_name">
+        <%= f.label :remember_me, 
+                  class: "checkbox inline" do %>
+          <%= f.check_box :remember_me %>
+          <span>Запомнить меня</span>
+        <% end %>
+      </div>
+
       <div class="sbmt">
         <%= f.submit "Войти на сайт", :class => "btn" %>
       </div>

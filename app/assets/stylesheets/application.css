@@ -232,6 +232,21 @@ h1 {
 	background-color: coral;
 }
 
+/* стили для флажка 'Запомнить меня' */
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
 /* Вывод ошибок при регистрации */
 
   
