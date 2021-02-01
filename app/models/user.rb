@@ -35,4 +35,9 @@ class User < ApplicationRecord
     BCrypt::Password.new(remember_digest).is_password?(remember_token)
   end
 
+  # Забывает пользователя
+  def forget
+    update_attribute(:remember_digest, nil)
+  end
+
 end
