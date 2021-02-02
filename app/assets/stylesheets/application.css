@@ -126,10 +126,11 @@ nav a {
 }
 
 
-/* название формы 'Sign up' и 'Log in' */
+/* название формы 'Sign up' и 'Log in' и 'Edit' */
 .signup-login{
+  background-color: orange;
 	border-bottom: 2px solid maroon;
-	width: 100px;
+	width: 250px;
 	height: 35px;
 	margin-top: 20px;
 	margin-left: 560px;

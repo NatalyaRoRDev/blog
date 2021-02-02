@@ -17,48 +17,39 @@
   <header class="navbar navbar-fixed-top">
     <div class="container">
       <div class='logo'>Motivashka</div>
-        
+      <nav>
+        <ul class="topmenu">
+          <li><%= link_to 'Главная', root_path,
+                               :class => "a" %></li>
+          <% if logged_in? %>
+            <li><%= link_to 'Мотивашки', root_path,
+                               :class => "a" %></li>
 
-            
+            <li><%= link_to 'Профиль', current_user, 
+                               :class => 'a' %>
+            <ul class="submenu">
+              <li><%= link_to 'Настройки', 
+                      edit_user_path(current_user),
+                               :class => "a" %></li>
+              <li><%= link_to 'Выход', logout_path,
+                               method: "delete" %></li>
+            </ul>
+            </li>
 
-<nav>
-  <ul class="topmenu">
-    <li><%= link_to 'Главная', root_path,
-                     :class => "a" %></li>
+          <li><%= link_to 'Помощь', help_path,
+                               :class => "a" %></li>
+          <% else %>
+            <li><%= link_to 'Войти', login_path, 
+                               :class => "a" %></li>
+          <% end %>
 
-    <% if logged_in? %>
-      <li><%= link_to 'Мотивашки', root_path,
-                             :class => "a" %></li>
-      <li><%= link_to 'Профиль', current_user, 
-                             :class => 'a' %>
-        <ul class="submenu">
-          <li><%= link_to 'Настройки', root_path,
-                             :class => "a" %></li>
-          <li><%= link_to 'Выход', logout_path,
-                                   method: "delete" %></li>
+        <li><%= link_to 'Контакты', contacts_path,
+                               :class => "a" %></li>
         </ul>
-      </li>
-        <li><%= link_to 'Помощь', help_path,
-                     :class => "a" %></li>
-    <% else %>
-      <li><%= link_to 'Войти', login_path, 
-                     :class => "a" %></li>
-    <% end %>
-
-      <li><%= link_to 'Контакты', contacts_path,
-                     :class => "a" %></li>
-  </ul>
-</nav>
-             
-          
-
-
-
-            
-          </ul>
-        </nav>
+      </nav>        
     </div>
   </header>
+
   <div class='container'> 
     <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>">
@@ -66,6 +57,7 @@
         </div>
     <% end %>     
     <%= yield %>
-  </div>  
+  </div> 
+
 </body>
 </html>
