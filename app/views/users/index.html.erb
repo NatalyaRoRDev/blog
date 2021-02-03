@@ -1,11 +1,15 @@
 <% provide(:title, 'All users') %>
-<h1>All users</h1>
+<div class="allUsers">
+  <h1>All users</h1>
+</div>
 
 <ul class="users">
   <% @users.each do |user| %>
-    <li>
+    <li class="users_all">
       <%= gravatar_for user, size: 50 %>
-      <%= link_to user.name, user %>
+      <div class='nameUsers'>
+        <%= link_to user.name, user, :class => 's' %>
+      </div>
     </li>
   <% end %>
 </ul>

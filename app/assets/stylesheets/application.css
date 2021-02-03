@@ -86,16 +86,42 @@ nav a {
 
 
 
-/* users index */
-.users {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
-  }
+/* index page for all users */
+.allUsers {
+  margin-top: 10px;
+  margin-left: 40px;
+  font-size: 1.7em;
+  height: 50px;
+  width: 150px;
 }
+
+.users {
+  margin-top: 30px;
+  list-style: none;
+  
+}
+
+.users_all {
+  overflow: auto;
+  padding: 10px 0;
+  border-bottom: 1px solid coral;
+  font-size: 1.5em;
+}
+
+/* Имя пользов. около граватара на странице /users */
+.nameUsers {
+  width: 950px;
+  margin-left: 200px;
+}
+
+.s {
+  color: #767676;
+}
+
+.s:hover {
+  color: #c0a97a;
+}
+
 
 /* Header */
 .navbar {
