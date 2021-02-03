@@ -22,7 +22,7 @@
           <li><%= link_to 'Главная', root_path,
                                :class => "a" %></li>
           <% if logged_in? %>
-            <li><%= link_to 'Мотивашки', root_path,
+            <li><%= link_to 'Мотивашки', users_path,
                                :class => "a" %></li>
 
             <li><%= link_to 'Профиль', current_user, 
