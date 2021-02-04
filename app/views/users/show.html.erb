@@ -5,6 +5,21 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
+        
+        <div class='userAge'>
+          	<% if @user.age == '21' || @user.age == '31' || @user.age == '41' || @user.age == '51' || @user.age == '61' %>
+              <%= @user.age %> год
+            <% elsif @user.age == '22' || @user.age == '23' || @user.age == '24' || @user.age == '32' || @user.age == '33' || @user.age == '34' || @user.age == '42' || @user.age == '43' || @user.age == '44'  || @user.age == '52' || @user.age == '53' || @user.age == '54'  || user.age == '62' || @user.age == '63' || @user.age == '64'  %>
+              <%= @user.age %> года
+            <% else %>
+              <%= @user.age %> лет
+            <% end %>
+        </div>
+
+        <div class="city">  
+          <%= @user.city %>
+        </div>
+        
       </h1>
     </section>
   </aside>
