@@ -110,16 +110,21 @@ nav a {
 
 /* Имя пользов. около граватара на странице /users */
 .nameUsers {
-  width: 950px;
+  color: #767676;
+  width: 700px;
   margin-left: 200px;
 }
 
-.s {
-  color: #767676;
+.linkGravatar {
+  color: coral;
 }
 
-.s:hover {
+.linkGravatar:hover {
   color: #c0a97a;
+}
+
+.userAge {
+  font-size: 1em;
 }
 
 
