@@ -4,11 +4,14 @@
 </div>
 
 <ul class="users">
-  <% @users.each do |user| %>
+  <% @users.reverse.each do |user| %>
     <li class="users_all">
       <%= gravatar_for user, size: 50 %>
       <div class='nameUsers'>
         <%= link_to user.name, user, :class => 's' %>
+      </div>
+      <div class='userAge'>
+      	<%= user.age %>
       </div>
     </li>
   <% end %>
