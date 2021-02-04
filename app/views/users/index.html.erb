@@ -3,6 +3,8 @@
   <h1>All users</h1>
 </div>
 
+<%= will_paginate %>
+
 <ul class="users">
   <% @users.reverse.each do |user| %>
     <li class="users_all">
@@ -28,3 +30,6 @@
     </li>
   <% end %>
 </ul>
+
+<%= will_paginate %>
+
