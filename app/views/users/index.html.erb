@@ -3,16 +3,15 @@
   <h1>All users</h1>
 </div>
 
-<%= will_paginate %>
-
 <ul class="users">
   <% @users.reverse.each do |user| %>
     <li class="users_all">
       <%= gravatar_for user, size: 50 %>
       <div class='nameUsers'>
-        <%= link_to user.name, user, :class => 'linkGravatar' %>
-          <div class='userAge'>
+        <%= link_to user.name, user, 
+             :class => 'linkGravatar' %>                 
 
+          <div class='userAge'>
           	<% if user.age == '21' || user.age == '31' || user.age == '41' || user.age == '51' || user.age == '61' %>
               <%= user.age %> год
             <% elsif user.age == '22' || user.age == '23' || user.age == '24' || user.age == '32' || user.age == '33' || user.age == '34' || user.age == '42' || user.age == '43' || user.age == '44'  || user.age == '52' || user.age == '53' || user.age == '54'  || user.age == '62' || user.age == '63' || user.age == '64'  %>
@@ -20,16 +19,23 @@
             <% else %>
               <%= user.age %> лет
             <% end %>
-
-
           </div>
+
           <div class="city">
           	<%= user.city %>
           </div>
+
+          <div id='admin'>
+            <% if current_user.admin?  && !current_user?(user) %>
+              | <%= link_to "delete", user, method: :delete,
+                                  data: { confirm: "Вы удаляете #{user.name}. Вы уверены?" } %>
+            <% end %>
+          </div>
+
       </div>
     </li>
   <% end %>
+
 </ul>
 
-<%= will_paginate %>
 
