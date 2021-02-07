@@ -6,6 +6,7 @@
   <div class="form">
   	<%= form_for(@user) do |f| %>
     <%= render 'shared/error_messages' %>
+    <div class='leftForm'>
   	  <div class="fiels_signup_name">
   	    <%= f.label :name, 'Ваше имя' %><br />
   	    <%= f.text_field :name, :class => "form-control" %>
@@ -18,22 +19,26 @@
         <%= f.label :city, 'Город проживания' %><br />
         <%= f.text_field :city, :class => "form-control" %>
       </div>
-      <div class="fiels_signup_email">
+    </div>
+    <div class='rightForm'>
+      <div class="fiels_signup_name">
   	    <%= f.label :email, 'Адрес электронной почты' %><br />
   	    <%= f.email_field :email, :class => "form-control" %>
       </div>
-      <div class="fiels_signup_password">
+      <div class="fiels_signup_name">
   	    <%= f.label :password, 'Придумайте пароль' %><br />
   	    <%= f.password_field :password, 
   	                         :class => "form-control" %>
       </div>
-      <div class="fiels_signup_password2">
+      <div class="fiels_signup_name">
   	    <%= f.label :password_confirmation,
                          'Повторите пароль' %>
         <br />
   	    <%= f.password_field :password_confirmation,
   	                         :class => "form-control" %>
       </div>
+    </div>
+
       <div class="sbmt">
   	  <%= f.submit "Создать свою страницу", 
   	                         :class => "btn" %>
