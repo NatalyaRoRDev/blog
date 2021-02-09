@@ -1,10 +1,10 @@
 <% provide(:title, "Log in") %>
 <div class="signup-login">
-  <h1>Войти</h1>
+  <h1>Войти</h1> 
 </div>
 
 <div class="row">
-  <div class="form">
+  <div class="formLogin">
     <%= form_for(:session, url: login_path) do |f| %>
 
       <div class="fiels_signup_name">
@@ -14,6 +14,7 @@
       </div>
       <div class="fiels_signup_name">
         <%= f.label :password %>
+        <%= link_to "(forgot password)" %>
         <%= f.password_field :password,
                            :class => 'form-control',
                  :placeholder => "Введите пароль" %>
@@ -26,14 +27,14 @@
         <% end %>
       </div>
 
-      <div class="sbmt">
-        <%= f.submit "Войти на сайт", :class => "btn" %>
+      <div class="sbmt1">
+        <%= f.submit "Войти на сайт", :class => "btn1" %>
       </div>
     <% end %>
 
-    <p>
-      Еще не с нами? <%= link_to "Создать свою страницу!", 
-                                          signup_path %>
+    <p class="link_to_signup">
+      Еще не с нами? => <%= link_to "Создать свою страницу!",
+                            signup_path, :class => 'CCC' %>
     </p>
   </div>
 </div>

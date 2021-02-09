@@ -1,7 +1,29 @@
-* { box-sizing: border-box; }
+/* ВСЯ СТРАНИЦА 'body', на всех страницах */
+* { 
+  box-sizing: border-box; 
+}
 
-nav { 
-  background: coral;
+/* Шапка сайта (на всех страницах) */
+.navbar {
+  background-color: pink;
+  height: 110px;
+}
+
+/* на всех страницай в шапке */
+/* div для названия сайта в шапке (Motivashka) */
+.logo {
+  margin-top: -6px;
+  margin-left: 30px;
+  width: 1150px;
+  height: 50px;
+  font-size: 2.1em;
+  padding-left: 470px;
+  border-bottom: 2px solid maroon;
+  
+}
+
+/* Меню в шапке сайта (на всех страницах) */
+nav {
   width: 1200px;
   height: 50px; 
 }
@@ -24,6 +46,13 @@ nav a {
   display: inline-block;
   position: relative;
 }
+
+.topmenu > li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
 .topmenu > li:after {
   content: "";
   position: absolute;
@@ -48,6 +77,10 @@ nav a {
   font-family: 'Exo 2', sans-serif;
 }
 .topmenu li a:hover { color: #c0a97a; }
+
+
+/* на всех стрвницах */
+/* Выпадающее меню (настройки и выход) */
 .submenu {
   position: absolute;
   left: 50%;
@@ -70,24 +103,13 @@ nav a {
   color: #484848;
   font-family: 'Kurale', serif;
 }
-.topmenu > li:hover .submenu {
-  visibility: visible;
-  opacity: 1;
-  transform: scale(1);
-}
 
+/* *** ВСЕ ПОЛЬЗОВАТЕЛИ * /USERS ********************** */
 
-
-
-
-
-
-
-
-
-
-/* index page for all users */
+/* url '/users' */
+/* Название страницы 'Мотивашки'. Задний фон под словом */
 .allUsers {
+  border-bottom: 2px solid maroon;
   margin-top: 10px;
   margin-left: 40px;
   font-size: 1.7em;
@@ -95,12 +117,17 @@ nav a {
   width: 150px;
 }
 
+/* url '/users' */
+/* Задний фон под списком всех пользователей */
 .users {
   margin-top: 30px;
   list-style: none;
   
 }
 
+/* url '/users' */
+/* Задний фон под каждым пользователем из списка */
+/* граватар, имя пользователя, возраст, город */
 .users_all {
   overflow: auto;
   padding: 10px 0;
@@ -108,6 +135,7 @@ nav a {
   font-size: 1.5em;
 }
 
+/* url '/users' */
 /* Имя пользов. около граватара на странице /users */
 .nameUsers {
   color: #767676;
@@ -115,6 +143,8 @@ nav a {
   margin-left: 200px;
 }
 
+/* url '/users' */
+/* Задний фон под именем пользователя около граватара */
 .linkGravatar {
   color: coral;
 }
@@ -123,75 +153,125 @@ nav a {
   color: #c0a97a;
 }
 
+/* url '/users' */
+/* Задний фон под городом пользователя около граватара */
 .city {
   margin-top: 20px;
 }
 
+/* url '/users' */
+/* ссылка 'delete' около каждого пользователя */
+/* Видно только для администратора сайта */
 #admin {
   width: 100px;
   margin-left: 700px;
   margin-top: -120px;
 }
 
+/* *** ВХОД НА САЙТ * /LOGIN ************************* */
 
+/* url '/signup', '/login', '/users/id/edit' */
+/* Задний фон названия над всеми формами */
 
-
-/* Header */
-.navbar {
-	background-color: coral;
-	width: 100%;
-	height: 110px;
-}
-
-/* div для названия сайта */
-.logo {
-	margin-top: -6px;
-	margin-left: 30px;
-	width: 1150px;
-	height: 50px;
-    font-size: 2.1em;
-    padding-left: 470px;
-    border-bottom: 2px solid maroon;
-	
-}
-
-/* div навигации сайта */
-.nav {
-	font-size: 1.7em;
-	padding-left: 70px;
-	margin-top: 10px;
-	float: left;
-	width: 1150px;
-	height: 50px;
-}
-
-.link {
-	color: white;
-}
-
-.link:hover {
-	color: maroon;
-	text-decoration: none;
-}
-
-
-/* название формы 'Sign up' и 'Log in' и 'Edit' */
 .signup-login{
 	border-bottom: 2px solid maroon;
 	width: 250px;
 	height: 35px;
 	margin-top: 20px;
-	margin-left: 60px;
+	margin-left: 10px;
 
 }
 
-
-/* sidebar */
-
-.col-md-6 {
-    background-color: orange;
-    margin-top: 20px;
+/* url '/login' */
+/* Форма для входа на сайт */
+.formLogin {
+  margin-top: 40px;
+  margin-left: 7px;
+  font-size: 1.3em;
+  float: left;
+  height: 480px;
+  width: 550px;
 }
+
+/* url '/login' */
+/* Задний фон для кнопки формы для входа на сайт */
+.sbmt1 {
+  margin-top: 20px;
+  margin-left: 18px;
+}
+
+/* url '/login' */
+/* Кнопка формы для входа на сайт */
+.btn1{
+  background-color: pink;
+  border: 2px solid hotpink;
+  width: 185px;
+}
+.btn1:active {
+  color: black;
+}
+
+/* url '/login' */
+/* 'еще не с нами?' и ссылка на регистрацию */
+.link_to_signup {
+  margin-top: 20px;
+  margin-left: 35px;
+}
+
+/* url '/login' */
+/* ссылка под формой входа на сайт 'CоздайCвоюCтр' */
+.CCC {
+  margin-left: 30px;
+}
+
+/* *** РЕГИСТРАЦИЯ * /SIGNUP ************************** */
+
+
+
+/* url '/signup' */
+/* левая часть формы регистрации(имя,возраст,город) */
+.leftForm {
+  width: 550px;
+  margin-left: -550px;
+}
+
+/* url '/signup' */
+/* правая часть формы регистрации(адрес эл.почты и пароль) */
+.rightForm {
+  margin-top: -277px;
+}
+
+/* url '/signup' */
+/* название полей в форме регистрация (который label) */
+.fiels_signup_name {
+  margin-top: 15px;
+  margin-left: 20px;
+  
+}
+
+/* url '/signup', '/login', '/users/id/edit' */
+/* class текстовых полей во всех формах */
+.form-control {
+  width: 520px;
+  border: 2px solid maroon;
+  
+}
+
+
+
+
+
+/* ************************** */
+
+
+
+
+
+
+
+
+
+
   
 .user_info {
 	background-color: pink;
@@ -224,60 +304,12 @@ h1 {
   margin-top: 15px;
 }
 
-/* Form for signup */
-.form {
-	margin-top: 40px;
-	margin-left: 552px;
-	font-size: 1.3em;
-	float: left;
-	height: 480px;
-	width: 550px;
-}
-
-/* левая часть формы регистрации(имя,возраст,город) */
-.leftForm {
-  width: 550px;
-  margin-left: -550px;
-}
-
-/* правая часть формы регистрации(адрес эл.почты и пароль) */
-.rightForm {
-  margin-top: -277px;
-}
-
-/* поля в форме регистрация */
-.fiels_signup_name {
-	margin-top: 15px;
-	margin-left: 20px;
-	
-}
 
 
-/* field in form signup */
-
-.form-control {
-	width: 520px;
-	border: 2px solid maroon;
-	
-}
 
 
-/* Submit for signup form */
-.sbmt {
-	margin-top: 30px;
-  margin-left: -280px;
 
-}
 
-.btn {
-	border: 2px solid coral;
-	width: 230px;
-	margin-left: 170px;
-}
-
-.btn:hover {
-	background-color: coral;
-}
 
 /* стили для флажка 'Запомнить меня' */
 .checkbox {
@@ -310,15 +342,47 @@ li {
   }
 }
 
+/* form for forgot password */
+
+.fiels_password_reset {
+  margin-left: 50px;
+}
+
+.form_control2 {
+  width: 410px;
+  border: 2px solid maroon;
+}
+
+.butn {
+  margin-top: 30px;
+}
+
+.btn2{
+  width: 200px;
+  margin-left: 50px;
+  border: 2px solid coral;
+  background-color: white;
+}
+
+.btn2:hover {
+  background-color: coral;
+}
 
 
 
 
 
-
-
-
-
+/* div навигации сайта */
+.nav {
+  color: red;
+  background-color: red;
+  font-size: 1.7em;
+  padding-left: 70px;
+  margin-top: 10px;
+  float: left;
+  width: 1150px;
+  height: 50px;
+}
 
 
 
