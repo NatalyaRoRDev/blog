@@ -3,6 +3,14 @@
   box-sizing: border-box; 
 }
 
+h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+}
+
 /* Шапка сайта (на всех страницах) */
 .navbar {
   background-color: pink;
@@ -104,6 +112,8 @@ nav a {
   font-family: 'Kurale', serif;
 }
 
+
+
 /* *** ВСЕ ПОЛЬЗОВАТЕЛИ * /USERS ********************** */
 
 /* url '/users' */
@@ -168,6 +178,8 @@ nav a {
   margin-top: -120px;
 }
 
+
+
 /* *** ВХОД НА САЙТ * /LOGIN ************************* */
 
 /* url '/signup', '/login', '/users/id/edit' */
@@ -211,6 +223,21 @@ nav a {
   color: black;
 }
 
+/* стили для флажка 'Запомнить меня' */
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
 /* url '/login' */
 /* 'еще не с нами?' и ссылка на регистрацию */
 .link_to_signup {
@@ -223,6 +250,8 @@ nav a {
 .CCC {
   margin-left: 30px;
 }
+
+
 
 /* *** РЕГИСТРАЦИЯ * /SIGNUP ************************** */
 
@@ -257,75 +286,6 @@ nav a {
   
 }
 
-
-
-
-
-/* ************************** */
-
-
-
-
-
-
-
-
-
-
-  
-.user_info {
-	background-color: pink;
-    padding: 10px 0;
-    margin-top: 20px;
-}
-.user_info:first-child {
-      border: 0;
-      padding-top: 0;
-}
-   
-h1 {
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-}
-
-
-.gravatar {
-    width: 150px;
-    height: 150px;
-  float: left;
-  margin-right: 30px;
-  margin-top: 20px;
-}
-
-.gravatar_edit {
-  margin-top: 15px;
-}
-
-
-
-
-
-
-
-
-/* стили для флажка 'Запомнить меня' */
-.checkbox {
-  margin-top: -10px;
-  margin-bottom: 10px;
-  span {
-    margin-left: 20px;
-    font-weight: normal;
-  }
-}
-
-#session_remember_me {
-  width: auto;
-  margin-left: 0;
-}
-
 /* Вывод ошибок при регистрации */
 
   
@@ -342,21 +302,71 @@ li {
   }
 }
 
-/* form for forgot password */
+
+
+
+
+/* *** ПРОФИЛЬ ПОЛЬЗОВАТЕЛЯ * url /USERS/ID ************ */
+
+/* url /users/id */
+/* Изображение в профиле */
+.gravatar {
+  width: 150px;
+  height: 150px;
+  float: left;
+  margin-right: 30px;
+  margin-top: 20px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+/* url /users/id */
+/* Задний фон под информацией о пользователе
+                             около граватара */
+.user_info {
+  background-color: pink;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+
+
+
+/* *** 'Забыли пароль?'* url /password_resets/new ***** */
+
+/* url /password_resets/new */
+/* Задний фон формы на странице 'Забыли пароль?' */
+.form_forgotPassword {
+  background-color: lime;
+}
+
+/* url /password_resets/new */
+/* Название текстового поля (label) в форме
+                           'forgot password?' */
 
 .fiels_password_reset {
+  background-color: yellow;
   margin-left: 50px;
 }
 
+/* url /password_resets/new */
+/* Текстовое поле в форме 'forgot password?' */
 .form_control2 {
+  background-color: red;
   width: 410px;
   border: 2px solid maroon;
 }
 
+/* url /password_resets/new */
+/* Задний фон кнопки в форме 'Забыли пароль?' */
 .butn {
   margin-top: 30px;
 }
 
+/* url /password_resets/new */
+/* Кнопка в форме 'Забыли пароль?' */
 .btn2{
   width: 200px;
   margin-left: 50px;
@@ -372,17 +382,55 @@ li {
 
 
 
-/* div навигации сайта */
-.nav {
-  color: red;
-  background-color: red;
-  font-size: 1.7em;
-  padding-left: 70px;
-  margin-top: 10px;
-  float: left;
-  width: 1150px;
-  height: 50px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
