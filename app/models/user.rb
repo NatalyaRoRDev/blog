@@ -69,17 +69,22 @@ class User < ApplicationRecord
     UserMailer.password_reset(self).deliver_now
   end
 
+  # Возвращает true, если истек срок давности ссылки для сброса пароля .
+  def password_reset_expired?
+    reset_sent_at < 2.hours.ago
+  end
+
   private
 
-    # Переводит адрес электронной почты в нижний регистр.
-    def downcase_email
-      self.email = email.downcase
-    end
+  # Переводит адрес электронной почты в нижний регистр.
+  def downcase_email
+    self.email = email.downcase
+  end
 
-    # Создает и присваивает активационнй токен и дайджест.
-    def create_activation_digest
-      self.activation_token  = User.new_token
-      self.activation_digest = User.digest(activation_token)
-    end
+  # Создает и присваивает активационнй токен и дайджест.
+  def create_activation_digest
+    self.activation_token  = User.new_token
+    self.activation_digest = User.digest(activation_token)
+  end
 
 end
