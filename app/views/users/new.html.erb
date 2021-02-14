@@ -1,47 +1,57 @@
 <% provide(:title, "Sign Up") %>
-<div class="signup-login">
+<div id="signup">
  <h1>Регистрация</h1>
 </div>
 <div class="row">
-  <div class="form">
+  <div class="formSignup">
   	<%= form_for(@user) do |f| %>
-    <%= render 'shared/error_messages' %>
-    <div class='leftForm'>
-  	  <div class="fiels_signup_name">
-  	    <%= f.label :name, 'Ваше имя' %><br />
-  	    <%= f.text_field :name, :class => "form-control" %>
-  	  </div>
-      <div class="fiels_signup_name">
-        <%= f.label :age, 'Ваш возраст' %><br />
-        <%= f.text_field :age, :class => "form-control" %>
+
+    
+    <div id="allForm">
+      <div class='leftForm'>
+  	  
+        <div class="fiels_signup_name">
+  	      <%= f.label :name, 'Ваше имя' %><br />
+  	      <%= f.text_field :name, :class => "field_signup" %>
+  	    </div>
+      
+        <div class="fiels_signup_name">
+          <%= f.label :age, 'Ваш возраст' %><br />
+          <%= f.text_field :age, :class => "field_signup" %>
+        </div>
+      
+        <div class="fiels_signup_name">
+          <%= f.label :city, 'Город проживания' %><br />
+          <%= f.text_field :city, :class => "field_signup" %>
+        </div>
+
       </div>
-      <div class="fiels_signup_name">
-        <%= f.label :city, 'Город проживания' %><br />
-        <%= f.text_field :city, :class => "form-control" %>
-      </div>
-    </div>
-    <div class='rightForm'>
-      <div class="fiels_signup_name">
-  	    <%= f.label :email, 'Адрес электронной почты' %><br />
-  	    <%= f.email_field :email, :class => "form-control" %>
-      </div>
-      <div class="fiels_signup_name">
-  	    <%= f.label :password, 'Придумайте пароль' %><br />
-  	    <%= f.password_field :password, 
-  	                         :class => "form-control" %>
-      </div>
-      <div class="fiels_signup_name">
-  	    <%= f.label :password_confirmation,
+      <div class='rightForm'>
+        <div class="fiels_signup_name">
+  	      <%= f.label :email, 'Адрес электронной почты' %>
+          <br />
+  	      <%= f.email_field :email, 
+                            :class => "field_signup" %>
+        </div>
+        <div class="fiels_signup_name">
+  	      <%= f.label :password, 'Придумайте пароль' %><br />
+  	      <%= f.password_field :password, 
+  	                         :class => "field_signup" %>
+        </div>
+        <div class="fiels_signup_name">
+  	      <%= f.label :password_confirmation,
                          'Повторите пароль' %>
-        <br />
-  	    <%= f.password_field :password_confirmation,
-  	                         :class => "form-control" %>
+          <br />
+  	      <%= f.password_field :password_confirmation,
+  	                         :class => "field_signup" %>
+        </div>
+        
       </div>
     </div>
 
-      <div class="sbmt">
+      <div class="sbmt_signup">
   	  <%= f.submit "Создать свою страницу", 
-  	                         :class => "btn" %>
+  	                         :class => "btn_signup" %>
       </div>
   	<% end %>
   </div>
