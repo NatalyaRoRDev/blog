@@ -1,3 +1,25 @@
 <% provide(:title, 'Контакты') %>
 
-<h1>Мои контакты</h1>
+<div class="myContacts">
+  <h1 id='cont'>Мои контакты</h1>
+  <p class='cont2'>
+    Если у вас есть критика или предложение по улучшению сайта,
+    буду благодарна, если вы напишите мне:
+  </p>
+
+  <p class='email'>
+	aдрес электронной почты
+    <a href="mailto:ruby_developer1@yahoo.com">
+      ruby_developer1@yahoo.com
+    </a>
+  </p>
+
+
+  <p class='phone'>
+    или пишите в WhatsApp и Viber: <b>+7 968 793 66 89</b>	
+  </p>
+</div>
+<div class="imageContacts">
+  <%= link_to image_tag("zakat_girl.jpg", alt: "image1",
+                                        :class => 'img') %> 
+</div>
