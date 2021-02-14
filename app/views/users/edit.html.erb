@@ -1,4 +1,4 @@
-<% provide(:title, "Edit user") %>
+<% provide(:title, "Изменение") %>
 <div class="signup-login">
   <h1>Изменение профиля</h1>
 </div>
@@ -9,33 +9,34 @@
       <%= render 'shared/error_messages' %>
 
       <div class="fiels_signup_name">
-        <%= f.label :name %>
+        <%= f.label :name, 'Ваше имя' %>
         <%= f.text_field :name, class: 'form-control' %>
       </div>
       <div class="fiels_signup_name">
-        <%= f.label :age %>
+        <%= f.label :age, 'Ваш возраст' %>
         <%= f.text_field :age, class: 'form-control' %>
       </div>
       <div class="fiels_signup_name">
-        <%= f.label :city %>
+        <%= f.label :city, 'Ваш город' %>
         <%= f.text_field :city, class: 'form-control' %>
       </div>
       <div class="fiels_signup_name">
-        <%= f.label :email %>
+        <%= f.label :email, 'Электронная почта' %>
         <%= f.email_field :email, class: 'form-control' %>
       </div>
       <div class="fiels_signup_name">
-        <%= f.label :password %>
+        <%= f.label :password, 'Придумайте пароль' %>
         <%= f.password_field :password,
                                   class: 'form-control' %>
       </div>
       <div class="fiels_signup_name">
-        <%= f.label :password_confirmation, "Confirmation" %>
+        <%= f.label :password_confirmation,
+                        'Повторите пароль' %>
         <%= f.password_field :password_confirmation,
                                   class: 'form-control' %>
       </div>
       <div class="fiels_signup_name">
-        <%= f.submit "Save changes", class: "btn btn-primary" %>
+        <%= f.submit "Сохранить", class: "btn btn-primary" %>
       </div>
     <% end %>
 
