@@ -87,7 +87,7 @@ nav a {
 .topmenu li a:hover { color: #c0a97a; }
 
 
-/* на всех стрвницах */
+/* на всех страницах */
 /* Выпадающее меню (настройки и выход) */
 .submenu {
   position: absolute;
@@ -124,7 +124,7 @@ nav a {
   margin-left: 40px;
   font-size: 1.7em;
   height: 50px;
-  width: 150px;
+  width: 200px;
 }
 
 /* url '/users' */
@@ -135,13 +135,17 @@ nav a {
   
 }
 
+#grvtr {
+  margin-left: 20px;
+}
+
 /* url '/users' */
 /* Задний фон под каждым пользователем из списка */
 /* граватар, имя пользователя, возраст, город */
 .users_all {
   overflow: auto;
   padding: 10px 0;
-  border-bottom: 1px solid coral;
+  border-bottom: 1px solid maroon;
   font-size: 1.5em;
 }
 
@@ -197,7 +201,7 @@ nav a {
 /* url '/login' */
 /* Форма для входа на сайт */
 .formLogin {
-  margin-top: 40px;
+  
   margin-left: 7px;
   font-size: 1.3em;
   float: left;
@@ -251,59 +255,105 @@ nav a {
   margin-left: 30px;
 }
 
+/* url '/login' */
+/* Картинка на странице входа на сайт (/login) */
+.imageLog {
+  margin-left: 700px;
+  margin-top: -550px;
+
+}
+
+.imageLogin {
+  height: 550px;
+  width: auto;
+}
+
 
 
 /* *** РЕГИСТРАЦИЯ * /SIGNUP ************************** */
 
+/* url '/signup' */
+/* Задний фон под формой на странице регистрации */
+.formSignup {
+  width: 1300px;
+  height: 600px;
+  margin-top: 30px;
+}
+
+/* url '/signup' */
+/* Название на странице 'Регистрация' */
+#signup {
+  width: 200px;
+  margin-top: 15px;
+  border-bottom: 2px solid maroon;
+}
+
+
+#allForm {
+  height: 300px;
+  position: relative;
+}
 
 
 /* url '/signup' */
 /* левая часть формы регистрации(имя,возраст,город) */
 .leftForm {
   width: 550px;
-  margin-left: -550px;
+  position: absolute;
 }
 
 /* url '/signup' */
 /* правая часть формы регистрации(адрес эл.почты и пароль) */
 .rightForm {
-  margin-top: -277px;
+  width: 550px;
+  margin-left: 550px;
+  position: absolute;
+  
 }
 
 /* url '/signup' */
 /* название полей в форме регистрация (который label) */
 .fiels_signup_name {
-  margin-top: 15px;
+  margin-top: 25px;
   margin-left: 20px;
   
 }
 
 /* url '/signup', '/login', '/users/id/edit' */
 /* class текстовых полей во всех формах */
-.form-control {
-  width: 520px;
+.field_signup {
+  margin-top: 10px;
+  width: 540px;
+  height: 38px;
   border: 2px solid maroon;
-  
-}
-
-/* Вывод ошибок при регистрации */
-
-  
-li {
-    color: red;
-    margin: 0 0 15px 0;
-  }
-
-
-.field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
-  }
+  margin-left: -10px;
 }
 
 
 
+/* url '/signup' */
+/* DIV кнопки формы на странице регистрации */
+.sbmt_signup {
+  width: 230px;
+  height: 40px;
+  margin-top: 30px;
+  margin-left: 430px;
+}
+
+/* url '/signup' */
+/* Кнопка формы на странице регистрации */
+.btn_signup {
+  background-color: hotpink;
+  border-bottom: 3px solid maroon;
+  border-right: 5px solid maroon;
+  width: 230px;
+  height: 40px;
+  margin-top: 80px;
+}
+
+.btn_signup:active {
+  color: black;
+}
 
 
 /* *** ПРОФИЛЬ ПОЛЬЗОВАТЕЛЯ * url /USERS/ID ************ */
@@ -327,8 +377,12 @@ li {
                              около граватара */
 .user_info {
   background-color: pink;
-    padding: 10px 0;
-    margin-top: 20px;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.nameUser {
+  font-size: 1.5em;
 }
 
 
@@ -339,7 +393,7 @@ li {
 /* url /password_resets/new */
 /* Задний фон формы на странице 'Забыли пароль?' */
 .form_forgotPassword {
-  background-color: lime;
+  margin-top: 30px;
 }
 
 /* url /password_resets/new */
@@ -347,41 +401,91 @@ li {
                            'forgot password?' */
 
 .fiels_password_reset {
-  background-color: yellow;
-  margin-left: 50px;
+  margin-left: 20px;
 }
 
 /* url /password_resets/new */
 /* Текстовое поле в форме 'forgot password?' */
 .form_control2 {
-  background-color: red;
   width: 410px;
   border: 2px solid maroon;
 }
 
 /* url /password_resets/new */
 /* Задний фон кнопки в форме 'Забыли пароль?' */
-.butn {
+.butnForgot {
   margin-top: 30px;
+
 }
 
 /* url /password_resets/new */
 /* Кнопка в форме 'Забыли пароль?' */
-.btn2{
+.btnForgot{
   width: 200px;
-  margin-left: 50px;
-  border: 2px solid coral;
-  background-color: white;
+  margin-left: 20px;
+  border-bottom: 3px solid maroon;
+  border-right: 5px solid maroon;
+  background-color: hotpink;
 }
 
-.btn2:hover {
-  background-color: coral;
+.btnForgot:active {
+  color: black;
 }
 
 
+/* *** 'КОНТАКТЫ'* url /contacts *********************** */
+
+/* url /contacts */
+/* Задний фон страницы 'Контакты' */
+.myContacts {
+  margin-top: 30px;
+}
+
+/* Название страницы 'Мои контакты' (в <h1>) */
+#cont {
+  font-size: 1.7em;
+  border-bottom: 2px solid maroon;
+  width: 200px;
+}
+
+/* Текст на странице 'Мои контакты' */
+.cont2 {
+  margin-top: 30px;
+  font-size: 1.6em;
+}
+
+/* Картинка на странице 'Контакты' */
+.imageContacts {
+  margin-top: 40px;
+  margin-left: 40px;
+}
 
 
+/* *** 'ГЛАВНАЯ'* url root_path *********************** */
 
+/* url root_path */
+/* Задний фон формы на странице 'Главная' */
+.welcome {
+  background-color: yellow;
+  height: 600px;
+}
+
+/* Название страницы 'Главная'(Всем привет) (в <h1>) */
+#wlcm {
+  word-spacing: 10px;
+  margin-top: 20px;
+  font-size: 1.5em;
+  border-bottom: 2px solid maroon;
+  width: 300px;
+}
+
+/* Картинка на странице 'Главная' */
+.imageHome {
+  height: 550px;
+  width: auto;
+  margin-left: 400px;
+  margin-top: -15px;
+}
 
 
 
