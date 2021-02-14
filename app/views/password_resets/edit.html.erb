@@ -8,13 +8,14 @@
 
       <%= hidden_field_tag :email, @user.email %>
 
-      <%= f.label :password %>
+      <%= f.label :password, 'Придумайте пароль' %>
       <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.label :password_confirmation, "Повторите пароль" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.submit "Update password", class: "btn btn-primary" %>
+      <%= f.submit "Изменить пароль", 
+            class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
