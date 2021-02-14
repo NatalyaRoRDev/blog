@@ -6,7 +6,9 @@
 <ul class="users">
   <% @users.reverse.each do |user| %>
     <li class="users_all">
-      <%= gravatar_for user, size: 50 %>
+      <div id='grvtr'>
+        <%= gravatar_for user, size: 50 %>
+      </div>
       <div class='nameUsers'>
         <%= link_to user.name, user, 
              :class => 'linkGravatar' %>                 
