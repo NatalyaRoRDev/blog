@@ -8,18 +8,16 @@
     <%= form_for(:session, url: login_path) do |f| %>
 
       <div class="fiels_signup_name">
-        <%= f.label :email %>
-        <%= f.email_field :email, :class => 'form-control',
-        :placeholder => "Адрес электронной почты" %>
+        <%= f.label :email, 'Электронная почта' %>
+        <%= f.email_field :email, :class => 'form-control' %>
       </div>
 
       <div class="fiels_signup_name">
-        <%= f.label :password %>
-          <%= link_to "(forgot password)",
+        <%= f.label :password, 'Введите пароль' %>
+          <%= link_to "(забыла пароль)",
                        new_password_reset_path %>
         <%= f.password_field :password,
-                           :class => 'form-control',
-                 :placeholder => "Введите пароль" %>
+                           :class => 'form-control' %>
       </div>
 
       <div class="fiels_signup_name">
@@ -39,5 +37,10 @@
       Еще не с нами? => <%= link_to "Создать свою страницу!",
                             signup_path, :class => 'CCC' %>
     </p>
+  </div>
+
+  <div class="imageLog">
+    <%= link_to image_tag("girl_in_shirt.jpg", alt: "image",
+                          :class => 'imageLogin') %> 
   </div>
 </div>
